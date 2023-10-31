@@ -11,15 +11,23 @@
         width: 100%;
         height: 360px;
         object-fit: cover;
+      margin-bottom: 18px;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
+    {% include 'nav.html' %}
+    <img class= "img-fluid" id="banner" src="static/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="">
     <div class="container" class = "text-center">
         <h1 class="text-center mt-4 mb-4">{{company_name}} Careers</h1>
-        <img class= "img-fluid" id="banner" src="static/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="">  
-         <h2 class="text-center mt-4 mb-4">About us</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, velit unde delectus ad esse ducimus et non ipsum assumenda inventore veniam libero vitae facere fugiat sit eum architecto hic sapiente nisi commodi impedit? Fugiat illo blanditiis deleniti illum natus quae ab sed rem asperiores deserunt quam aspernatur, molestiae odit voluptatem possimus odio quaerat nihil, laboriosam doloribus veniam et. Voluptatum, eligendi deleniti consequatur provident laborum voluptatibus ea esse asperiores in! Ea soluta rem, fuga doloremque itaque, ex beatae perspiciatis quo, enim mollitia impedit ipsam. Architecto enim, nobis eaque debitis inventore minus dolore esse sit accusamus maxime officia voluptates. Voluptas recusandae repudiandae quae nesciunt nihil maiores animi ratione quidem, sint aspernatur quos suscipit nisi unde aperiam nulla odio dolore itaque excepturi ipsa.</p>
+        <div class ="row" style = "margin-bottom: 16px">
+          <div class = "col-md-6">
+        <p class = "lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, velit unde delectus ad esse ducimus et non ipsum assumenda inventore veniam libero vitae facere fugiat sit eum architecto hic sapiente nisi commodi impedit? Fugiat illo blanditiis deleniti illum natus quae ab sed rem asperiores deserunt quam aspernatur, molestiae odit voluptatem possimus odio quaerat nihil, laboriosam doloribus veniam et. Voluptatum, eligendi deleniti consequatur provident laborum voluptatibus ea esse asperiores in! Ea soluta rem, fuga doloremque itaque, ex beatae perspiciatis quo, enim mollitia impedit ipsam. Architecto enim, nobis eaque debitis inventore minus dolore esse sit accusamus maxime officia voluptates. Voluptas recusandae repudiandae quae nesciunt nihil maiores animi ratione quidem, sint aspernatur quos suscipit nisi unde aperiam nulla odio dolore itaque excepturi ipsa.</p>
+          </div>
+          <div class = "d-none d-md-block col-6">
+          <img src ="/static/work.jpg" style = "height: 320px; border-radius: 4px">
+        </div>
         <h2 class="text-center mt-4 mb-4">Job Openings</h2>
         <div>
             {% for job in jobs %}
@@ -30,11 +38,11 @@
         </div>  
 
         <div class="text-center">
-            <button type="button" class="btn btn-dark btn-lg text-center">Contact us</button>
+            <a href = "mailto: prateeksinghkushwah0@gmail.com" type="button" class="btn btn-dark btn-lg text-center">Contact us</a>
         </div>
-        <p class="text-center mt-2 mb-2">copyright 2022, Prateek </p>
+        <!-- <p class="text-center mt-2 mb-2">copyright 2023, Prateek </p> -->
 
     </div>
-
+    {% include 'footer.html' %}
 </body>
 </html>
